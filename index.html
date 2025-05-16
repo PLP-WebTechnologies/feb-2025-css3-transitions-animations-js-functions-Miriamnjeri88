@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Animations with localStorage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Animation Playground</h1>
+        
+        <div class="controls">
+            <button id="themeToggle" class="btn pulse">Toggle Dark Mode</button>
+            <button id="animateBtn" class="btn bounce">Trigger Animation</button>
+            <div class="preference">
+                <label for="animationSpeed">Animation Speed:</label>
+                <select id="animationSpeed">
+                    <option value="slow">Slow</option>
+                    <option value="normal" selected>Normal</option>
+                    <option value="fast">Fast</option>
+                </select>
+            </div>
+        </div>
+        
+        <div id="animatedElement" class="box">
+            Watch me animate!
+        </div>
+        
+        <div class="status">
+            <p>Last animation: <span id="lastAnimationTime">Never</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+:root {
+    --primary-color: #3498db;
+    --bg-color: #f5f5f5;
+    --text-color: #333;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition-speed: 0.3s;
+}
+
+.dark-mode {
+    --primary-color: #9b59b6;
+    --bg-color: #2c3e50;
+    --text-color: #ecf0f1;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.5s ease, color 0.5s ease;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px;
+    transition: transform var(--transition-speed) ease, 
+                box-shadow var(--transition-speed) ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--box-shadow);
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px auto;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: all var(--transition-speed) ease;
+}
+
+/* Animation Classes */
+.bounce {
+    animation: bounce 0.5s infinite alternate;
+}
+
+.pulse {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Animation Effects */
+.spin {
+    animation: spin 1s linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.slide {
+    animation: slide 1s ease-out;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.grow {
+    animation: grow 0.5s ease-in-out;
+}
+
+@keyframes grow {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Speed Classes */
+.slow {
+    --transition-speed: 0.8s;
+}
+
+.fast {
+    --transition-speed: 0.1s;
+}
+
+.preference {
+    margin: 20px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+.status {
+    margin-top: 30px;
+    padding: 10px;
+    text-align: center;
+}
